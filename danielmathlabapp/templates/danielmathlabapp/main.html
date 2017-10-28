@@ -1,0 +1,56 @@
+{% extends 'danielmathlabapp/base.html' %}
+{% load static %}
+
+{% block header-link %}
+	<link rel="stylesheet" href="{% static 'css/main-page-style.css' %}">
+	<script type="text/javascript" src="{% static 'js/main-page-script.js' %}"></script>
+{% endblock header-link %}
+
+{% block content %}
+	<div class="background-container">
+		<div class="content-container">
+	        <div class="search-container">
+	            <div class="logo-image"></div>
+	        	<p class="header-search">Введите что вы хотите вычислить:</p>
+	        	<div class="search-wrapper">
+		        	<form action="/calculate/" method="post">
+		    			{% csrf_token %}
+		    			<input class="main-input" type="text" id="command-line" name="search">
+		    			<input class="main-submit" type="submit" name="enter" value="">
+		    		</form>
+	    		</div>
+	    		<div class="header-command-list">
+	    			<p class="text-header-command-list">Показать допустимые команды</p>
+	    		</div>
+	    		<div class="command-list">
+	    			<p class="text-command">Для записи переменных используйте символ "x", добавив соответсвующий номер. Например, х1, х2, х3 и т.д.</p>
+	    			<p class="text-command">Структура строки исходных данных такова: maximize(minimize) [целевая функция] in [ограничение1] and [ограничение2] and [и т.д.] from x1 = 0 to 10 and x2 = [начальное значение] to [конечное значение] [и т.д.] using simplex(genetic).</p>
+	    			<p class="text-command">Для записи уравнений можно применять следующие операторы: сложение(+), вычитание(-), умножение(*), деление(/), возведение в степень(**). Для описания остального меобходимо использовать функции и методы описанные ниже.</p>
+	    			<p class="text-command">Для ввода исходных данных доступны следующие функции и методы:</p>
+	    			<p class="text-command">&nbsp;&nbsp;&nbsp;&nbsp;- abs(x) - возвращает абсолютное значение (модуль) числа x.</p>
+	    			<p class="text-command">&nbsp;&nbsp;&nbsp;&nbsp;- actorial(x) - возвращает факториал целого числа x.</p>
+	    			<p class="text-command">&nbsp;&nbsp;&nbsp;&nbsp;- exp(x) - возвращает e в степени x.</p>
+	    			<p class="text-command">&nbsp;&nbsp;&nbsp;&nbsp;- log(x[, base]) - при передаче функции одного аргумента x, возвращает натуральный логарифм x (логарифм по основанию e = 2.7182…). При передаче двух аргументов, второй берется как основание логарифма.</p>
+	    			<p class="text-command">&nbsp;&nbsp;&nbsp;&nbsp;- pow(x, y) - возвращает x в степени y. В отличие от операции ** приводит оба аргумента к типу float.</p>
+	    			<p class="text-command">&nbsp;&nbsp;&nbsp;&nbsp;- sqrt(x) - квадратный корень из x.</p>
+	    			<p class="text-command">&nbsp;&nbsp;&nbsp;&nbsp;- cos(x) - возвращает косинус x, где x выражен в радианах.</p>
+	    			<p class="text-command">&nbsp;&nbsp;&nbsp;&nbsp;- sin(x) - возвращает синус x, где x выражен в радианах.</p>
+	    			<p class="text-command">&nbsp;&nbsp;&nbsp;&nbsp;- tan(x) - возвращает тангенс x, где x выражен в радианах.</p>
+	    			<p class="text-command">&nbsp;&nbsp;&nbsp;&nbsp;- degrees(x) - конвертирует значение угла x из радиан в градусы.</p>
+	    			<p class="text-command">&nbsp;&nbsp;&nbsp;&nbsp;radians(x) - Конвертирует значение угла x из градусов в радианы.</p>
+	    		</div>
+	        </div>
+	        <div class="description-container">
+	        	<p class="header-examples">Примеры ввода исходной информации:</p>
+	        	<div id="sm-example" class="example-block">
+	        		<div class="icon-example"></div>
+	        		<div class="name-example">Симплекс метод</div>
+	        	</div>
+	        	<div id="gm-example" class="example-block">
+	        		<div class="icon-example"></div>
+	        		<div class="name-example">Генетический метод</div>
+	        	</div>
+	        </div>
+	    </div>
+	</div>
+{% endblock content %}

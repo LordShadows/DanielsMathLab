@@ -1,0 +1,321 @@
+@font-face {
+    font-family: SF-Regular; /* Гарнитура шрифта */
+    src: url(../fonts/SFUIDisplay-Regular.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: SF-Medium; /* Гарнитура шрифта */
+    src: url(../fonts/SFUIDisplay-Medium.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: SF-Text; /* Гарнитура шрифта */
+    src: url(../fonts/SFUIText-Regular.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: Cambria; /* Гарнитура шрифта */
+    src: url(../fonts/cambria.ttc); /* Путь к файлу со шрифтом */
+}
+
+html {
+    height: 100%;
+    min-width: 1000px;
+    font-family: SF-Regular, Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100%; 
+    min-width: 1000px;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-width: 1000px;
+    height: 42px;
+    border: 1px solid #DDD;
+    border-width: 0 0 1px 0;
+    background-color: #FFF;
+}
+
+.logo {
+    height: 100%;
+    width: 40px;
+    margin-left: 30px;
+    position: relative;
+    float: left;
+}
+
+.logo img {
+    height: 36px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.menu {
+    float: right;
+    height: 100%;
+}
+
+.main-nav {
+    float: right;
+    height: 100%;
+    vertical-align: middle;
+    list-style:none;
+    margin-top: 9px;
+}
+
+.main-nav li {
+    float: left;
+    margin-right: 25px;
+    position: relative;
+    display: block;
+}
+
+.user-header-link {
+    display: block;
+    text-decoration: none;
+    font-family: SF-Regular;
+    font-size: 13px;
+    color: #535353;
+    padding: 3px 0px 0px 10px;
+    cursor: pointer;
+}
+
+.user-header-link:hover {
+    color: #FF7E00;
+}
+
+.sign-in {
+    text-decoration: none;
+    background-color: #FFF;
+    color: #FF7E00;
+    border: 1px solid #FF7E00;
+    border-radius: 4px;
+    font-family: SF-Regular;
+    font-size: 13px;
+    text-transform: none;
+    display: block;
+    padding: 3px 15px 3px 15px;
+    cursor: pointer;
+}
+
+.sign-in:hover {
+    background-color: #ffac3d;
+    color: #fff;
+}
+
+.content {
+    width: 100%;
+    flex: 1 0 auto;
+}
+
+
+.footer {
+    flex: 0 0 auto;
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    min-width: 1000px;
+    background-color: #FFF;
+}
+
+.page-footer {
+    height: 22px;
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+    border: 1px solid #DDD;
+    border-width: 1px 0 1px 0;
+}
+
+p.footer-text {
+    color: #535353;
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
+.contact-data{
+    background-color: #efefef;
+    height: 80px;
+    width: 100%;
+    display: none;
+}
+
+.login-splash {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    min-width: 1000px;
+    height: 99%;
+    background-color: #efefef;
+    text-align: center;
+    border: 1px solid #DDD;
+    border-width: 0 0 1px 0;
+}
+
+.authorization-container {
+    position: absolute;
+    width: 800px;
+    top: 30%;
+    left: 50%;
+    margin-left: -400px;
+}
+
+img.login-image {
+    float: left;
+}
+
+.form-wrapper {
+    float: right;
+    width: 400px;
+    font-family: ;
+    font-size: 13;
+    color: #ffbf6b;
+    text-align: center;
+}
+
+.form-wrapper form {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+table.login-table {
+    font-family: SF-Regular;
+    font-size: 13;
+    color: #ffbf6b;
+}
+.login-splash input[type="text"]{
+    border: 1px solid #ffbf6b;
+    border-radius: 0px;
+    background-color: #343434;
+    color: white;
+    width: 95%;
+    font-family: SF-Regular;
+    font-size: 13px;
+    height: 27px;
+    padding-left: 10px;
+}
+
+.login-splash input[type="password"]{
+    border: 1px solid #ffbf6b;
+    border-radius: 0px;
+    background-color: #343434;
+    color: white;
+    width: 95%;
+    font-family: SF-Regular;
+    font-size: 13px;
+    height: 27px;
+    padding-left: 10px;
+}
+
+.login-splash input[type="button"]{
+    background-color: #c2975f;
+    border: 1px solid #ffbf6b;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    width: 95%;
+    cursor: pointer;
+    font-family: SF-Regular;
+    font-size: 13px;
+}
+
+.login-splash input[type="button"]:hover {
+    background-color: #dba864;
+}
+
+.login-splash input[type="button"]:active {
+    background-color: #ffbf6b;
+}
+
+.login-splash p{
+    margin-bottom: 10px;
+}
+
+#main-label {
+    font-family: SF-Medium;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+.add-link a {
+    color: #ffbf6b;
+    text-decoration: none;
+}
+
+.add-link a:hover{
+    color: white;
+}
+
+h2 {
+    position: relative;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+h2 > span {
+    display: inline-block;
+    margin: 0 .4em;
+}
+
+h2 > span:before,
+h2 > span:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid #787878;
+    margin-top: .6em;
+}
+
+h2 > span:before {
+    margin-left: -102%;
+}
+
+h2 > span:after {
+    margin-left: 2%;
+}
+
+.close-login {
+    color: #ffbf6b;
+    font-size: 40px;
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.close-login:hover {
+    color: white;
+}
+
+.close-login-text {
+    font-size: 13px; 
+    float: left; 
+    margin-top: 19px; 
+    margin-right: 10px;
+    display: none;
+}
